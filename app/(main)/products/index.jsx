@@ -96,20 +96,20 @@ export default function ProductsScreen() {
           <View id="_products" className="w-full h-[100%] flex px-4 py-2 mt-2">
             {/* Filters & Sort */}
             <View className="divide-y-2 divide-neutral-200">
-              <View className="flex flex-row py-2 gap-x-3">
+              {/* <View className="flex flex-row py-2 gap-x-3">
                 <Filter
                   mainMaxPrice={data?.data?.mainMaxPrice}
                   mainMinPrice={data?.data?.mainMinPrice}
                   handleChangeRoute={handleChangeRoute}
                 />
                 <Sort handleChangeRoute={handleChangeRoute} />
-              </View>
+              </View> */}
 
-              <View className="flex flex-row justify-between py-2">
-                <Text className="text-base text-neutral-600">所有商品</Text>
+              <View className="flex flex-row justify-between pb-2">
+                <Text className="text-base text-neutral-600">All Products</Text>
 
                 <Text className="text-base text-neutral-600">
-                  {data?.data?.productsLength} 件商品
+                  {data?.data?.productsLength} products
                 </Text>
               </View>
             </View>
@@ -124,7 +124,7 @@ export default function ProductsScreen() {
                 estimatedItemSize={200}
               />
             ) : (
-              <Text className="text-center text-red-500">没有找到商品</Text>
+              <Text className="text-center text-red-500">Product not found</Text>
             )}
           </View>
         </View>

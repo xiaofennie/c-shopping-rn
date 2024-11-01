@@ -119,15 +119,15 @@ export default function CategoryScreen() {
                                   key={levelThreeCategory._id}
                                 >
                                   <TouchableOpacity
-                                    className={`flex items-center w-[26%] mr-[11%] space-y-2 my-4 ${index % 3 === 2 ? 'mr-0' : ''}`}
+                                    className={`flex items-center w-[26%] mr-[11%] space-y-2 my-2 ${index % 3 === 2 ? 'mr-0' : ''}`}
                                   >
-                                    <View className="flex items-center justify-center w-full aspect-square rounded-full border-solid border-2 border-slate-200 overflow-hidden">
+                                    <View className="flex items-center justify-center w-full aspect-square rounded border-solid border-2 border-slate-200 overflow-hidden">
                                       <Image
                                         key={index}
                                         source={{
                                           uri: levelThreeCategory.image,
                                         }}
-                                        className="w-[70%] h-[70%]"
+                                        className="w-[94%] h-[94%]"
                                       />
                                     </View>
                                     <Text className="text-gray-700">{levelThreeCategory.name}</Text>

@@ -47,9 +47,9 @@ export const Item = ({ index, height, width, animated, style, children }) => {
       key={index}
       className={` ${height} ${width} ${
         animated === 'background'
-          ? 'animate-pulse bg-red-200'
+          ? 'animate-pulse bg-amber-50'
           : animated === 'border'
-            ? 'animate-pulse border-2 border-red-200'
+            ? 'animate-pulse border-2 border-amber-50'
             : 'bg-white'
       } rounded-md`}
       style={style}

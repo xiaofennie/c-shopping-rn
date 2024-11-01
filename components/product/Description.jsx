@@ -16,8 +16,8 @@ const Description = props => {
   return (
     <Pressable>
       <View className="px-3">
-        <Text className="mb-3 lg:border-b-2 lg:border-red-500 w-fit">介绍</Text>
-        <Text className="text-sm leading-6 tracking-wider text-gray-600 lg:text-sm lg:leading-8">
+        <Text className="mb-3 lg:border-b-2 lg:border-red-500 w-fit font-semibold">Introduce</Text>
+        <Text className="gap-y-2 text-sm leading-6 tracking-wider text-gray-600 lg:text-sm lg:leading-8">
           {isShowDesc ? description : truncate(description, 300)}
         </Text>
         {description.length > 300 && (
@@ -26,9 +26,9 @@ const Description = props => {
             onPress={showDescHandlers.toggle}
           >
             {isShowDesc ? (
-              <Text className="text-sm text-sky-400">收起</Text>
+              <Text className="text-sm text-sky-400">Retract</Text>
             ) : (
-              <Text className="text-sm text-sky-400">查看更多</Text>
+              <Text className="text-sm text-sky-400">More Details</Text>
             )}
             {!isShowDesc && (
               <Icons.MaterialIcons name="keyboard-arrow-right" size={24} className="text-sky-400" />

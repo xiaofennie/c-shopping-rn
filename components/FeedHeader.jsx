@@ -24,9 +24,10 @@ export default function FeedHeader() {
   //? Render(s)
   return (
     <View style={{ paddingTop: insets.top }} className="p-3 bg-white shadow-sm">
-      <View className="flex flex-row items-center justify-between">
-        <Logo width={120} height={40} />
-        <View className="flex flex-row space-x-3 pr-1">
+      <View className="py-4">
+        {/* <Logo width={120} height={40} /> */}
+        <Text className="text-center text-stone-700 text-3xl font-bold">floor</Text>
+        {/* <View className="flex flex-row space-x-3 pr-1">
           <TouchableOpacity
             onPress={() => {
               handleIconClick('/notice')
@@ -48,7 +49,7 @@ export default function FeedHeader() {
               </View>
             )}
           </Pressable>
-        </View>
+        </View> */}
       </View>
       <Search />
     </View>

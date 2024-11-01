@@ -65,7 +65,7 @@ export default function SerachScreen() {
     <>
       <Stack.Screen
         options={{
-          title: '搜索',
+          title: 'Search',
           headerBackTitleVisible: false,
         }}
       />
@@ -75,8 +75,9 @@ export default function SerachScreen() {
             <Icons.EvilIcons name="search" size={24} color="#1F2937" />
           </View>
           <TextInput
-            className="flex-grow p-1 text-left bg-transparent outline-none input focus:border-none"
+            className="flex-grow p-1 py-3 text-left bg-transparent outline-none input focus:border-none"
             type="text"
+            placeholder="Search..."
             value={search}
             onChangeText={handleChange}
           />

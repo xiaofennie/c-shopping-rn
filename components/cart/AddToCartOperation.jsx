@@ -69,18 +69,18 @@ const AddToCartOperation = props => {
         </View>
       ) : (
         <Button onPress={handleAddItem} className="px-12 text-sm btn">
-          添加到购物车
+          Add to Cart
         </Button>
       )}
 
-      <View className="min-w-fit">
+      {/* <View className="min-w-fit">
         <ProductPrice
           inStock={product.inStock}
           discount={product.discount}
           price={product.price}
           singleProduct
         />
-      </View>
+      </View> */}
     </View>
   )
 }

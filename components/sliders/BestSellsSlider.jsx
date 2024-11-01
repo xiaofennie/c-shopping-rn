@@ -37,7 +37,7 @@ export default function BestSellsSlider(props) {
   //? Render(s)
 
   return (
-    <FeedSectionContainer title="畅销商品">
+    <FeedSectionContainer title="Best Selling">
       {isLoading ? (
         Array(2)
           .fill('_')
@@ -59,7 +59,7 @@ export default function BestSellsSlider(props) {
         <FlashList
           data={products}
           renderItem={({ item, index }) => (
-            <View className="mr-4">
+            <View className="mr-4 w-full">
               {item.map((row, rowIndex) => (
                 <Link
                   href={{
@@ -67,18 +67,20 @@ export default function BestSellsSlider(props) {
                   }}
                   key={row._id}
                   asChild
-                  className="px-1 py-4 w-60"
+                  className="px-2 py-2 w-screen bg-gray-100 mb-3"
                 >
                   <Pressable className="flex flex-row">
                     <Image
                       source={{
                         uri: row.images[0].url,
                       }}
-                      className="w-24 h-24 shrink-0 mr-2"
+                      className="w-24 h-24 shrink-0 mr-2 flex-none"
                     />
-                    <View className="flex flex-auto flex-row items-center border-b border-gray-200">
-                      <Text className="text-2xl text-sky-500 mx-2">{index * 2 + rowIndex + 1}</Text>
-                      <Text className="flex-auto">{truncate(row.title, 15)}</Text>
+                    <View className="flex flex-1 flex-row items-center">
+                      <Text className="text-2xl text-stone-700 mx-2">
+                        {index * 2 + rowIndex + 1}
+                      </Text>
+                      <Text className="flex-auto">{truncate(row.title, 20)}</Text>
                     </View>
                   </Pressable>
                 </Link>

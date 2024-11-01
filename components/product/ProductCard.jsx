@@ -56,18 +56,19 @@ const ProductCard = props => {
               <View>
                 <Depot inStock={product.inStock} />
               </View>
-              <View className="flex flex-row items-center gap-x-1">
+              {/* <View className="flex flex-row items-center gap-x-1">
                 <Text className=" text-neutral-500">{product.rating.toFixed(1)}</Text>
                 <Icons.AntDesign name="star" size={16} className="text-amber-400" />
-              </View>
+              </View> */}
             </View>
             <View className="flex flex-row justify-between">
-              <View>
+              {/* <View>
                 {product.discount > 0 && product.inStock !== 0 && (
                   <DiscountProduct discount={product.discount} />
                 )}
-              </View>
-              {product.inStock !== 0 ? (
+              </View> */}
+              {/* 价格 */}
+              {/* {product.inStock !== 0 ? (
                 <ProductPrice
                   inStock={product.inStock}
                   discount={product.discount}
@@ -75,7 +76,7 @@ const ProductCard = props => {
                 />
               ) : (
                 <Text className="h-12 my-0.5">不可用</Text>
-              )}
+              )} */}
             </View>
           </View>
         </View>

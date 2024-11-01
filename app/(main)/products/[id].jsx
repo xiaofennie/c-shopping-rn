@@ -74,7 +74,7 @@ export default function SingleProductScreen() {
                 </Pressable>
               </Link>
 
-              <Icons.Feather name="heart" size={20} color="#1F2937" className="px-2 py-1" />
+              {/* <Icons.Feather name="heart" size={20} color="#1F2937" className="px-2 py-1" /> */}
             </>
           ),
           title: product?.title || '',
@@ -108,18 +108,18 @@ export default function SingleProductScreen() {
 
                   <View className="section-divide-y h-2 bg-gray-100" />
 
-                  {product.inStock > 0 && product.colors.length > 0 && (
+                  {/* {product.inStock > 0 && product.colors.length > 0 && (
                     <SelectColor colors={product.colors} />
                   )}
 
                   {product.inStock > 0 && product.sizes.length > 0 && (
                     <SelectSize sizes={product.sizes} />
                   )}
-                  {product.inStock === 0 && <OutOfStock />}
+                  {product.inStock === 0 && <OutOfStock />} */}
 
                   <Info infos={product?.info} />
 
-                  <FreeShipping />
+                  {/* <FreeShipping /> */}
                 </View>
               </View>
               <View>
@@ -127,17 +127,17 @@ export default function SingleProductScreen() {
                   <Description description={product.description} />
                 )}
               </View>
-              <SmilarProductsSlider smilarProducts={smilarProducts} />
+              {/* <SmilarProductsSlider smilarProducts={smilarProducts} /> */}
               <View className="section-divide-y h-2 bg-gray-100" />
               <Specification specification={product.specification} />
 
               <View className="section-divide-y h-2 bg-gray-100" />
-
-              <Reviews
+              {/* 评价 */}
+              {/* <Reviews
                 numReviews={product.numReviews}
                 prdouctID={product._id}
                 productTitle={product.title}
-              />
+              /> */}
             </View>
           </ScrollView>
           {product.inStock > 0 && (

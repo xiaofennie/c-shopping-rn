@@ -12,7 +12,7 @@ export default function Categories(props) {
   //? Re-Renders
   if (childCategories.categories.length > 0 && color && name) {
     return (
-      <FeedSectionContainer title="分类">
+      <FeedSectionContainer className="mt-[-5px]">
         <FlashList
           data={childCategories.categories}
           horizontal
@@ -26,7 +26,7 @@ export default function Categories(props) {
               asChild
             >
               <Pressable className="flex items-center mr-3 space-y-2">
-                <View className="w-14 h-14 rounded-full border-solid border-2 border-slate-200 overflow-hidden">
+                <View className="w-20 h-20 rounded border-solid border-2 border-slate-200 overflow-hidden">
                   <Image
                     key={index}
                     source={{
