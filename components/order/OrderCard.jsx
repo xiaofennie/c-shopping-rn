@@ -26,7 +26,9 @@ const OrderCard = props => {
                 <Icons.AntDesign name="clockcircle" size={20} color="#FFFFFF" />
               </View>
             )}
-            <Text className="text-sm text-black">{order.delivered ? '完成' : '未确认'}</Text>
+            <Text className="text-sm text-black">
+              {order.delivered ? 'Completed' : 'Unconfirmed'}
+            </Text>
           </View>
           {order.delivered && (
             <Text className="">{moment(order.updatedAt).format('YYYY-MM-DD HH:mm:ss')}</Text>
@@ -34,7 +36,7 @@ const OrderCard = props => {
         </View>
         <View className="flex flex-row flex-wrap justify-between lg:px-3">
           <View className="flex flex-row">
-            <Text>订单号:</Text>
+            <Text>Order ID:</Text>
             <Text className="ml-2 text-sm text-black">{order._id}</Text>
           </View>
           <View className="flex flex-row items-center gap-x-1">

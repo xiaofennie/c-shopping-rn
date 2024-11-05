@@ -12,41 +12,41 @@ export default function ProfileScreen() {
 
   const profilePaths = [
     {
-      name: '我的订单',
+      name: 'My Orders',
       Icon: Icons.SimpleLineIcons,
       IconName: 'handbag',
       path: '/profile/orders',
     },
+    // {
+    //   name: '我的收藏',
+    //   Icon: Icons.Feather,
+    //   IconName: 'heart',
+    //   path: '/profile/lists',
+    // },
+    // {
+    //   name: '我的评价',
+    //   Icon: Icons.FontAwesome5,
+    //   IconName: 'comment',
+    //   path: '/profile/reviews',
+    // },
     {
-      name: '我的收藏',
-      Icon: Icons.Feather,
-      IconName: 'heart',
-      path: '/profile/lists',
-    },
-    {
-      name: '我的评价',
-      Icon: Icons.FontAwesome5,
-      IconName: 'comment',
-      path: '/profile/reviews',
-    },
-    {
-      name: '地址管理',
+      name: 'Address Management',
       Icon: Icons.MaterialIcons,
       IconName: 'location-city',
       path: '/profile/addresses',
     },
-    {
-      name: '最近访问',
-      Icon: Icons.AntDesign,
-      IconName: 'clockcircleo',
-      path: '/profile/user-history',
-    },
-    {
-      name: '账户信息',
-      Icon: Icons.AntDesign,
-      IconName: 'user',
-      path: '/profile/personal-info',
-    },
+    // {
+    //   name: '最近访问',
+    //   Icon: Icons.AntDesign,
+    //   IconName: 'clockcircleo',
+    //   path: '/profile/user-history',
+    // },
+    // {
+    //   name: 'Account information',
+    //   Icon: Icons.AntDesign,
+    //   IconName: 'user',
+    //   path: '/profile/personal-info',
+    // },
   ]
 
   //？Render(s)
@@ -57,7 +57,7 @@ export default function ProfileScreen() {
           headerShown: false,
         }}
       />
-      <AuthWrapper tips="享受购物">
+      <AuthWrapper tips="Enjoy Shoppin">
         <ScrollView className="bg-white">
           <View style={{ paddingTop: insets.top + 60 }} className="flex bg-white">
             <View className="flex flex-row items-center px-4">
@@ -75,14 +75,14 @@ export default function ProfileScreen() {
                   </>
                 )}
               </View>
-              <Link href="/profile/personal-info">
+              {/* <Link href="/profile/personal-info">
                 <Icons.Feather
                   name="edit"
                   size={30}
                   color="black"
                   className="icon text-gray-700  lg:mr-3"
                 />
-              </Link>
+              </Link> */}
             </View>
 
             <View className="mt-7 px-4">

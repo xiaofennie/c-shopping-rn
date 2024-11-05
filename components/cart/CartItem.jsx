@@ -57,22 +57,22 @@ const CartItem = props => {
               <Text className="">{item.size.size}</Text>
             </View>
           )}
-          <View className="flex flex-row items-center gap-x-2">
+          {/* <View className="flex flex-row items-center gap-x-2">
             <Icons.Ionicons name="shield-checkmark-outline" size={20} className="icon" />
             <Text className="font-light">正品保证和发货保证</Text>
-          </View>
-          <View className="flex flex-row items-center gap-x-2">
+          </View> */}
+          {/* <View className="flex flex-row items-center gap-x-2">
             <Icons.MaterialIcons name="save" size={20} className="icon text-sky-400" />
             <Text className="font-light">仓库有售</Text>
-          </View>
+          </View> */}
           {item.discount > 0 ? (
             <View>
               <DiscountCartItem discount={item.discount} price={item.price} />
             </View>
           ) : (
-            <View className="flex items-center gap-x-2">
-              <Text className="text-sm text-gray-700">{formatNumber(item.price)}</Text>
-              <Text className="">¥</Text>
+            <View className="flex items-end gap-x-2">
+              <Text className="text-sm font-bold text-gray-700">{formatNumber(item.price)} ¥</Text>
+              {/* <Text className="" /> */}
             </View>
           )}
         </View>

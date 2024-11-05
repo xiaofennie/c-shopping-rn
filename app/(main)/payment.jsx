@@ -47,7 +47,7 @@ export default function PaymentScreen() {
     )
       return Toast.show({
         type: 'error',
-        text2: '请填写您的地址',
+        text2: 'Please complete your address',
       })
     else
       postData({
@@ -91,7 +91,7 @@ export default function PaymentScreen() {
     <>
       <Stack.Screen
         options={{
-          title: `填写订单`,
+          title: `Order`,
           headerBackTitleVisible: false,
         }}
       />
@@ -122,7 +122,7 @@ export default function PaymentScreen() {
                         size={18}
                         className="text-red-300 icon"
                       />
-                      <Text className="font-normal text-red-300">购物车</Text>
+                      <Text className="font-normal text-red-300">Shopping Cart</Text>
                     </Pressable>
                   </Link>
 
@@ -133,7 +133,7 @@ export default function PaymentScreen() {
                       size={16}
                       className="w-6 h-6 text-red-500 icon"
                     />
-                    <Text className="text-base font-normal text-red-500">付款方式</Text>
+                    <Text className="text-base font-normal text-red-500">Confirm</Text>
                   </View>
                 </View>
               </View>
@@ -149,7 +149,7 @@ export default function PaymentScreen() {
                     <Text className="text-sm text-neutral-600">{userInfo?.name}</Text>
                   </View>
                 ) : (
-                  <Text className="text-black">填写地址</Text>
+                  <Text className="text-black">To complete address</Text>
                 )}
                 <ChangeAddress />
               </View>
@@ -165,12 +165,12 @@ export default function PaymentScreen() {
                     height={40}
                     alt="icon"
                   />
-                  <View>
+                  {/* <View>
                     <Text className="text-base text-black">正常发货</Text>
                     <Text className="block text-neutral-600">有现货</Text>
-                  </View>
+                  </View> */}
                   <View className="inline-block px-2 py-1 ml-3 bg-gray-100 rounded-lg h-auto">
-                    <Text className="text-neutral-600">{formatNumber(totalItems)} 件商品</Text>
+                    <Text className="text-neutral-600">{formatNumber(totalItems)} items</Text>
                   </View>
                 </View>
                 <View className="flex flex-row flex-wrap justify-start gap-x-8 gap-y-5">
@@ -203,9 +203,9 @@ export default function PaymentScreen() {
                   ))}
                 </View>
 
-                <Link href="/checkout/cart" className="inline-block mt-6 text-sm text-sky-500">
-                  返回购物车
-                </Link>
+                {/* <Link href="/checkout/cart" className="inline-block mt-6 text-sm text-sky-500">
+                  Back to shopping cart
+                </Link> */}
               </View>
 
               <View className="section-divide-y h-2 bg-gray-100" />
@@ -213,7 +213,7 @@ export default function PaymentScreen() {
               {/* cart info */}
               <View className="lg:border lg:border-gray-200 lg:rounded-md lg:h-fit">
                 <CartInfo />
-                <View className="px-3 py-2 space-y-3">
+                {/* <View className="px-3 py-2 space-y-3">
                   <RadioButton.Group
                     onValueChange={value => setPaymentMethod(value)}
                     value={paymentMethod}
@@ -221,7 +221,7 @@ export default function PaymentScreen() {
                     <RadioButton.Item label="在线支付" value="在线支付" />
                     <RadioButton.Item label="银行卡" value="银行卡" />
                   </RadioButton.Group>
-                </View>
+                </View> */}
               </View>
             </View>
           </ScrollView>
@@ -234,7 +234,7 @@ export default function PaymentScreen() {
               isLoading={isLoading}
               className="w-full max-w-5xl mx-auto"
             >
-              完成购买
+              Complete purchase
             </Button>
           </View>
         </View>

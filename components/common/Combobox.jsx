@@ -11,7 +11,7 @@ const Combobox = props => {
   const { field } = useController({ name, control })
 
   //? Handlers
-  const filteredList = list.map(item => ({ ...item, label: item.name, value: item.code }))
+  const filteredList = list.map(item => ({ ...item, label: item.name, value: item.id }))
 
   const onChangeHandler = value => {
     field.onChange(filteredList.find(item => item.value === value))
@@ -23,7 +23,7 @@ const Combobox = props => {
       <RNPickerSelect
         onValueChange={onChangeHandler}
         items={filteredList}
-        value={field.value?.code ?? ''}
+        value={field.value?.id ?? ''}
         placeholder={{
           label: placeholder,
           value: '',

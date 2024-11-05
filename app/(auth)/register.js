@@ -52,7 +52,7 @@ export default function RegisterScreen() {
     <>
       <Stack.Screen
         options={{
-          title: '注册',
+          title: 'Register',
           headerBackTitleVisible: false,
         }}
       />
@@ -62,24 +62,20 @@ export default function RegisterScreen() {
           isError={isError}
           isSuccess={isSuccess}
           error={error?.data?.message}
-          message="注册成功"
+          message="Successfully registered"
           onSuccess={onSuccess}
         />
       )}
       <ScrollView className="h-[100%] bg-white pt-10">
         <View className="w-[100vw] px-8 py-6 space-y-4">
-          <Logo className="mx-auto w-40 h-16" />
-          <Text className=" mt-56">注册</Text>
+          {/* <Logo className="mx-auto w-40 h-16" /> */}
+          <Text className="text-center text-[#faea71] text-4xl font-bold">floor</Text>
+          <Text className=" mt-56">Register</Text>
           <View className="space-y-0">
-            <TextField
-              errors={formErrors.name}
-              placeholder="请输入您的账户名称"
-              name="name"
-              control={control}
-            />
+            <TextField errors={formErrors.name} placeholder="Name" name="name" control={control} />
             <TextField
               errors={formErrors.email}
-              placeholder="请输入您的账户邮箱"
+              placeholder="Email"
               name="email"
               keyboardType="email-address"
               autoCapitalize="none"
@@ -89,7 +85,7 @@ export default function RegisterScreen() {
             <TextField
               errors={formErrors.password}
               secureTextEntry
-              placeholder="请输入您的账户密码"
+              placeholder="Password"
               name="password"
               control={control}
             />
@@ -97,17 +93,17 @@ export default function RegisterScreen() {
               control={control}
               errors={formErrors.confirmPassword}
               secureTextEntry
-              placeholder="确认密码，请再次输入"
+              placeholder="Confirm password, please enter again"
               name="confirmPassword"
             />
             <Button isLoading={isLoading} onPress={handleSubmit(onSubmit)}>
-              注册
+              Register
             </Button>
           </View>
           <View className="flex flex-row">
-            <Text className="inline mr-2 text-gray-800 text-xs">我已经有账户了</Text>
+            <Text className="inline mr-2 text-gray-800 text-xs">I already have an account.</Text>
             <Link replace href="/login" className="text-blue-400 text-xs">
-              去登录
+              Go login
             </Link>
           </View>
         </View>

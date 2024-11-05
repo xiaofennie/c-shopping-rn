@@ -8,9 +8,9 @@ export default function EmptySearchList() {
       <EmptySearch className="mx-auto h-60 w-60" />
       <View className="max-w-md p-2 mx-auto space-y-2 border border-neutral-300 rounded-md">
         <View className="flex items-center gap-x-2">
-          <Text>没有找到结果</Text>
+          <Text>No results found</Text>
         </View>
-        <Text className="text-gray-500">使用更多可变单词或检查输入属性 </Text>
+        <Text className="text-gray-500">Try using more flexible words or check your input</Text>
       </View>
     </View>
   )

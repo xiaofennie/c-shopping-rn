@@ -39,6 +39,7 @@ export default function CategoryScreen() {
     <>
       <Stack.Screen
         options={{
+          title: 'Category',
           headerRight: () => (
             <>
               <Icons.EvilIcons

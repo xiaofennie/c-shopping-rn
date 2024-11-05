@@ -10,9 +10,9 @@ const Depot = ({ inStock }) => {
     return <Text className="text-red-500">Only left{formatNumber(inStock)}</Text>
   } else if (inStock > 10) {
     return (
-      <View className="flex flex-row items-center text-green-700 gap-x-1">
-        <Icons.FontAwesome name="save" size={16} className="text-green-700" />
-        <Text className="text-green-700">On sale</Text>
+      <View className="flex flex-row items-center text-[#5b8c00] gap-x-1">
+        <Icons.FontAwesome name="truck" size={16} className="text-[#5b8c00]" />
+        <Text className="text-[#5b8c00]">In stock</Text>
       </View>
     )
   } else if (inStock === 0) {

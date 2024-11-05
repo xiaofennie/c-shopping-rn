@@ -40,7 +40,7 @@ const OrdersScreen = () => {
     <>
       <Stack.Screen
         options={{
-          title: '我的订单',
+          title: 'My Orders',
           headerBackTitleVisible: false,
         }}
       />

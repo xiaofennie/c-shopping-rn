@@ -66,11 +66,11 @@ export default function LoginScreen() {
           onSuccess={onSuccess}
         />
       )}
-      <View className="h-[100%]  bg-white pt-10">
+      <View className="h-[100%] bg-white pt-10">
         <View className="w-[100vw] px-8 py-6 space-y-4">
           {/* <Logo className="mx-auto w-40 h-16" /> */}
           <Text className="text-center text-[#faea71] text-4xl font-bold">floor</Text>
-          <Text className=" mt-56">login</Text>
+          <Text className=" mt-56">Login</Text>
           <View className="space-y-0">
             <TextField
               errors={formErrors.email}

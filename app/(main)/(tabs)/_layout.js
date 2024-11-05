@@ -11,7 +11,7 @@ export default function TabsLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'feed',
+          title: 'Home',
           tabBarIcon: ({ color }) => <Entypo name="home" size={24} color={color} />,
         }}
       />
@@ -30,6 +30,7 @@ export default function TabsLayout() {
       <Tabs.Screen
         name="profile"
         options={{
+          title: 'Profile',
           tabBarIcon: ({ color }) => <FontAwesome name="user" size={24} color={color} />,
         }}
       />
