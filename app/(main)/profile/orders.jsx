@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { View } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
 
-import { OrderCard, ShowWrapper, EmptyOrdersList, OrderSkeleton } from '@/components'
+import { OrderCard, ShowWrapper, EmptyOrdersList, OrderSkeleton, Icons } from '@/components'
 import { useGetOrdersQuery } from '@/services'
 
 const OrdersScreen = () => {
@@ -42,6 +42,17 @@ const OrdersScreen = () => {
         options={{
           title: 'My Orders',
           headerBackTitleVisible: false,
+          headerRight: () => (
+            <>
+              <Icons.EvilIcons
+                name="refresh"
+                size={30}
+                color="#1F2937"
+                className="px-2 py-1"
+                onPress={refetch}
+              />
+            </>
+          ),
         }}
       />
       <View className="bg-white">

@@ -9,16 +9,16 @@ export const orderApiSlice = apiSlice.injectEndpoints({
         params: { page_size, page },
       }),
 
-      providesTags: (result, error, arg) =>
-        result
-          ? [
-              ...result.data.orders.map(({ _id }) => ({
-                type: 'Order',
-                id: _id,
-              })),
-              'Order',
-            ]
-          : ['Order'],
+      // providesTags: (result, error, arg) =>
+      //   result
+      //     ? [
+      //         ...result.data.orders.map(({ _id }) => ({
+      //           type: 'Order',
+      //           id: _id,
+      //         })),
+      //         'Order',
+      //       ]
+      //     : ['Order'],
     }),
 
     getOrders: builder.query({
@@ -34,16 +34,16 @@ export const orderApiSlice = apiSlice.injectEndpoints({
         return newQueryArgs
       },
       // Always merge incoming data to the cache entry
-      merge: (currentCache, newItems) => {
-        if (currentCache) {
-          newItems.data.orders.unshift(...currentCache.data.orders)
-          return {
-            ...currentCache,
-            ...newItems,
-          }
-        }
-        return newItems
-      },
+      // merge: (currentCache, newItems) => {
+      //   if (currentCache) {
+      //     newItems.data.orders.unshift(...currentCache.data.orders)
+      //     return {
+      //       ...currentCache,
+      //       ...newItems,
+      //     }
+      //   }
+      //   return newItems
+      // },
       // Refetch when the page arg changes
       forceRefetch({ currentArg, previousArg }) {
         if (currentArg?.page === 1) return false

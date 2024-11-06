@@ -33,16 +33,16 @@ export const productApiSlice = apiSlice.injectEndpoints({
         if (currentArg?.page === 1) return false
         return currentArg?.page !== previousArg?.page
       },
-      providesTags: result =>
-        result
-          ? [
-              ...result.data.products.map(({ _id }) => ({
-                type: 'Product',
-                id: _id,
-              })),
-              'Product',
-            ]
-          : ['Product'],
+      // providesTags: result =>
+      //   result
+      //     ? [
+      //         ...result.data.products.map(({ _id }) => ({
+      //           type: 'Product',
+      //           id: _id,
+      //         })),
+      //         'Product',
+      //       ]
+      //     : ['Product'],
     }),
 
     getSingleProductDetail: builder.query({

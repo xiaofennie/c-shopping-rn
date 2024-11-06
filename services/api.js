@@ -12,6 +12,7 @@ const apiSlice = createApi({
   }),
   tagTypes: ['User', 'Review', 'Details', 'Order', 'Product', 'Category', 'Slider', 'Banner'],
   endpoints: builder => ({}),
+  keepUnusedDataFor: 0,
 })
 
 export default apiSlice
