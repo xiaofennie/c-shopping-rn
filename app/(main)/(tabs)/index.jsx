@@ -62,10 +62,10 @@ export default function FeedScreen() {
               homePage
             />
             {/* <DiscountSlider currentCategory={currentCategory} /> */}
-            {/* <BannerOne data={bannerOneType} /> */}
+            <BannerOne data={bannerOneType} />
             <BestSellsSlider categorySlug={currentCategory?.slug} />
-            {/* <BannerTwo data={bannerTwoType} />
-            <MostFavouraiteProducts categorySlug={currentCategory?.slug} /> */}
+            <BannerTwo data={bannerTwoType} />
+            {/* <MostFavouraiteProducts categorySlug={currentCategory?.slug} /> */}
           </>
         </ScrollView>
       </ShowWrapper>

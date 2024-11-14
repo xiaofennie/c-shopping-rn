@@ -10,7 +10,7 @@ export default function EmptySearchList() {
         <View className="flex items-center gap-x-2">
           <Text>No results found</Text>
         </View>
-        <Text className="text-gray-500">Try using more flexible words or check your input</Text>
+        {/* <Text className="text-gray-500">Try using more flexible words or check your input</Text> */}
       </View>
     </View>
   )

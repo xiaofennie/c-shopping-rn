@@ -34,9 +34,9 @@ export default function CartScreen() {
           <>
             <View className=" h-full space-y-3 bg-white">
               <View className="py-20">
-                <EmptyCart className="mx-auto h-52 w-52" />
-                <Text className="text-base font-bold text-center">
-                  Your shopping cart is empty!
+                <EmptyCart className="mx-auto h-40 w-40" />
+                <Text className="text-base font-bold text-gray-600 text-center">
+                  Your shopping cart is empty
                 </Text>
               </View>
             </View>
@@ -71,14 +71,14 @@ export default function CartScreen() {
               </View>
             </ScrollView>
             {/* to Shipping */}
-            <View className="fixed bottom-0 left-0 right-0 z-10 flex flex-row items-center justify-between px-3 py-3 bg-white border-t border-gray-300 shadow-3xl lg:hidden">
-              <View>
-                <Text className="font-light">Total shopping cart</Text>
+            <View className="fixed bottom-0 left-0 right-0 z-10 flex flex-row items-center justify-end px-3 py-3 bg-white border-t border-gray-300 shadow-3xl lg:hidden">
+              {/* <View>
+                <Text className="font-bold">Total</Text>
                 <View className="flex flex-row items-center">
-                  <Text className="text-sm">{formatNumber(totalPrice - totalDiscount)}</Text>
+                  <Text className="font-bold">{formatNumber(totalPrice - totalDiscount)}</Text>
                   <Text className="ml-1">¥</Text>
                 </View>
-              </View>
+              </View> */}
               <Button className="w-1/2" onPress={handleRoute}>
                 Continue
               </Button>

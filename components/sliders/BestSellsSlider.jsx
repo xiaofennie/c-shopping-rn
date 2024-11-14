@@ -3,7 +3,6 @@ import { Link } from 'expo-router'
 import { View, Text, Image, Pressable } from 'react-native'
 
 import FeedSectionContainer from '../common/FeedSectionContainer'
-import Skeleton from '../common/Skeleton'
 
 import { useGetProductsQuery } from '@/services'
 import { truncate } from '@/utils'
@@ -39,22 +38,7 @@ export default function BestSellsSlider(props) {
   return (
     <FeedSectionContainer title="Best Selling">
       {isLoading ? (
-        Array(2)
-          .fill('_')
-          .map((_, index) => (
-            <Skeleton.Items key={index} className="flex flex-row p-2 space-x-4">
-              <Skeleton.Item
-                height="h-24"
-                width="w-24"
-                animated="background"
-                className="rounded-md "
-              />
-              <Skeleton.Items className="flex items-start">
-                <Skeleton.Item height="h-5" width="w-52" animated="background" className="mt-4" />
-                <Skeleton.Item height="h-5" width="w-36" animated="background" className="mt-4" />
-              </Skeleton.Items>
-            </Skeleton.Items>
-          ))
+        <></>
       ) : (
         <FlashList
           data={products}
@@ -77,9 +61,7 @@ export default function BestSellsSlider(props) {
                       className="w-24 h-24 shrink-0 mr-2 flex-none"
                     />
                     <View className="flex flex-1 flex-row items-center">
-                      <Text className="text-2xl text-stone-700 mx-2">
-                        {index * 2 + rowIndex + 1}
-                      </Text>
+                      <Text className="text-2xl text-primary mx-2">{index * 2 + rowIndex + 1}</Text>
                       <Text className="flex-auto">{truncate(row.title, 20)}</Text>
                     </View>
                   </Pressable>

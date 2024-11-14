@@ -15,7 +15,7 @@ const BasicAddresses = ({ addressModalProps }) => {
     <>
       <Stack.Screen
         options={{
-          title: 'Address Management',
+          title: 'My Address',
           headerBackTitleVisible: false,
         }}
       />
@@ -89,11 +89,11 @@ const BasicAddresses = ({ addressModalProps }) => {
             <Address className="h-52 w-52" />
             <Text>You have not filled in the address yet.</Text>
             <Pressable
-              className="flex flex-row items-center px-3 py-2 text-stone-600 border-2 border-stone-600 rounded-lg gap-x-3"
+              className="flex flex-row items-center px-3 py-2 border-2 border-primary rounded-lg gap-x-3"
               onPress={openAddressModal}
             >
-              <Icons.Entypo name="location" size={16} className="text-gray-500 icon" />
-              <Text>Add New Address</Text>
+              <Icons.Entypo name="location" size={16} className="text-primary icon" />
+              <Text className="text-gray-600">Add New Address</Text>
             </Pressable>
           </View>
         )}

@@ -85,7 +85,7 @@ const Filter = props => {
       <View className=" px-3">
         <Pressable className="flex flex-row items-center gap-x-1" onPress={filtersHandlers.open}>
           <Icons.Ionicons name="filter" size={16} className="text-neutral-600" />
-          <Text className="text-base text-neutral-600">筛选</Text>
+          <Text className="text-base text-neutral-600">Fliter</Text>
         </Pressable>
       </View>
       <Modal
@@ -100,19 +100,19 @@ const Filter = props => {
           style={{ paddingTop: insets.top }}
           className="flex flex-col h-[100vh] w-[80vw] px-5 ml-[15vw] bg-white"
         >
-          <Modal.Header onClose={filtersHandlers.close}>过滤器</Modal.Header>
+          <Modal.Header onClose={filtersHandlers.close}>Fliter</Modal.Header>
           <Modal.Body>
             <View className="flex justify-end ">
               <Pressable disabled={!canReset} onPress={handleResetFilters}>
                 <Text type="button" className="text-sm text-sky-500">
-                  删除过滤器
+                  Reset
                 </Text>
               </Pressable>
             </View>
 
             <View className="divide-y">
               <View className="flex flex-row justify-between items-center py-2.5">
-                <Text className="font-medium text-gray-700 w-3/4">仅限库存商品</Text>
+                <Text className="font-medium text-gray-700 w-3/4">Only for in stock</Text>
                 <Switch
                   value={filters.inStock}
                   onValueChange={value =>
@@ -120,7 +120,7 @@ const Filter = props => {
                   }
                 />
               </View>
-              <View className="flex flex-row justify-between items-center py-2.5">
+              {/* <View className="flex flex-row justify-between items-center py-2.5">
                 <Text className="font-medium text-gray-700 w-3/4">仅限特价商品</Text>
                 <Switch
                   value={filters.discount}
@@ -157,7 +157,7 @@ const Filter = props => {
 
                   <Text className="w-6 h-6">¥</Text>
                 </View>
-              </View>
+              </View> */}
             </View>
           </Modal.Body>
         </Modal.Content>

@@ -10,11 +10,15 @@ export const Button = props => {
   return (
     <TouchableOpacity
       disabled={isLoading}
-      className={`py-3 px-8 flex items-center outline-none rounded-md active:scale-[.98] bg-[#faea71] button ${isRounded ? 'rounded-3xl' : ''} ${className}
+      className={`py-3 px-8 flex items-center outline-none rounded-md active:scale-[.98] bg-primary button ${isRounded ? 'rounded-3xl' : ''} ${className}
     `}
       {...restPropps}
     >
-      {isLoading ? <Loading /> : <Text className="text-stone-900 font-semibold">{children}</Text>}
+      {isLoading ? (
+        <Loading color="#fff" />
+      ) : (
+        <Text className="text-white font-semibold">{children}</Text>
+      )}
     </TouchableOpacity>
   )
 }

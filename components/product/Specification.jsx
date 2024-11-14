@@ -29,17 +29,21 @@ const Specification = props => {
               if (!item.value) return
               else
                 return (
-                  <View key={i} className="flex flex-row">
-                    <Text
-                      className="py-2 ml-3 font-light leading-5 tracking-wide text-gray-500 w-36"
-                      // width={width / 2}
-                    >
-                      {item.title}:
-                    </Text>
-                    <View className="flex-auto block w-full py-2 font-normal leading-5 tracking-wide text-gray-600 break-all">
-                      <RenderHtml contentWidth={width / 2} source={{ html: item.value }} />
-                    </View>
+                  <View key={i} className="flex flex-row gap-x-2 tracking-wide text-gray-500">
+                    <Text className="leading-6 font-light">{item.title} :</Text>
+                    <Text className="text-gray-900 flex-1 leading-6">{item.value || '--'}</Text>
                   </View>
+                  // <View key={i} className="flex flex-row">
+                  //   <Text
+                  //     className="py-2 ml-3 font-light leading-5 tracking-wide text-gray-500 w-36"
+                  //     // width={width / 2}
+                  //   >
+                  //     {item.title}:
+                  //   </Text>
+                  //   <View className="flex-auto block w-full py-2 font-normal leading-5 tracking-wide text-gray-600 break-all">
+                  //     <RenderHtml contentWidth={width / 2} source={{ html: item.value }} />
+                  //   </View>
+                  // </View>
                 )
             })}
           </View>

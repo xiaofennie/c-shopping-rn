@@ -49,7 +49,7 @@ const ProductCard = props => {
             </View>
           </View>
           <View className="flex-1 space-y-3 w-full">
-            <Text className="text-sm leading-6 text-gray-800 break-all h-14">
+            <Text className="text-sm leading-6 text-gray-800 break-all h-14 font-semibold">
               {truncate(product.title, 70)}
             </Text>
             <View className="flex flex-row justify-between">
@@ -61,15 +61,6 @@ const ProductCard = props => {
                 <Text className=" text-neutral-500">{product.rating.toFixed(1)}</Text>
                 <Icons.AntDesign name="star" size={16} className="text-amber-400" />
               </View> */}
-            </View>
-            <View className="flex flex-row justify-between">
-              {/* 折扣 */}
-              <View>
-                {product.discount > 0 && product.inStock !== 0 && (
-                  <DiscountProduct discount={product.discount} />
-                )}
-              </View>
-              {/* 价格 */}
               {product.inStock !== 0 ? (
                 <ProductPrice
                   inStock={product.inStock}
@@ -77,8 +68,26 @@ const ProductCard = props => {
                   price={product.price}
                 />
               ) : (
-                <Text className="h-12 my-0.5">不可用</Text>
+                <></>
               )}
+            </View>
+            <View className="flex flex-row justify-between">
+              {/* 折扣 */}
+              {/* <View>
+                {product.discount > 0 && product.inStock !== 0 && (
+                  <DiscountProduct discount={product.discount} />
+                )}
+              </View> */}
+              {/* 价格 */}
+              {/* {product.inStock !== 0 ? (
+                <ProductPrice
+                  inStock={product.inStock}
+                  discount={product.discount}
+                  price={product.price}
+                />
+              ) : (
+                <Text className="h-12 my-0.5">不可用</Text>
+              )} */}
             </View>
           </View>
         </View>

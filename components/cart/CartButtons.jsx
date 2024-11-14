@@ -17,7 +17,7 @@ const CartButtons = props => {
   return (
     <View className="flex flex-row items-center py-2 text-sm rounded-md bg-white shadow justify-evenly">
       <Pressable onPress={() => dispatch(increase(item.itemID))} className="active:scale-90">
-        <Icons.AntDesign name="plus" size={16} className="text-red-500 icon" />
+        <Icons.AntDesign name="plus" size={16} className="text-light-primary icon" />
       </Pressable>
 
       <Text className="text-sm min-w-[22px] text-center">{formatNumber(item.quantity)}</Text>
@@ -27,11 +27,11 @@ const CartButtons = props => {
           onPress={() => dispatch(removeFromCart(item.itemID))}
           className="active:scale-90"
         >
-          <Icons.AntDesign name="delete" size={16} className="text-red-500 icon" />
+          <Icons.AntDesign name="delete" size={16} className="text-light-primary icon" />
         </Pressable>
       ) : (
         <Pressable onPress={() => dispatch(decrease(item.itemID))} className="active:scale-90">
-          <Icons.AntDesign name="minus" size={16} className="text-red-500 icon" />
+          <Icons.AntDesign name="minus" size={16} className="text-light-primary icon" />
         </Pressable>
       )}
     </View>

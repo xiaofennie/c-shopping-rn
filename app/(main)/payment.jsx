@@ -120,20 +120,20 @@ export default function PaymentScreen() {
                       <Icons.AntDesign
                         name="shoppingcart"
                         size={18}
-                        className="text-red-300 icon"
+                        className="text-light-primary/40 icon"
                       />
-                      <Text className="font-normal text-red-300">Shopping Cart</Text>
+                      <Text className="font-normal text-light-primary/40">Shopping Cart</Text>
                     </Pressable>
                   </Link>
 
-                  <View className="h-[1px] w-8  bg-red-300" />
+                  <View className="h-[1px] w-8  bg-light-primary" />
                   <View className="flex flex-col items-center gap-y-2">
                     <Icons.AntDesign
                       name="wallet"
                       size={16}
-                      className="w-6 h-6 text-red-500 icon"
+                      className="w-6 h-6 text-light-primary icon"
                     />
-                    <Text className="text-base font-normal text-red-500">Confirm</Text>
+                    <Text className="text-base font-normal text-light-primary">Confirm</Text>
                   </View>
                 </View>
               </View>
@@ -234,7 +234,7 @@ export default function PaymentScreen() {
               isLoading={isLoading}
               className="w-full max-w-5xl mx-auto"
             >
-              Complete purchase
+              Submit
             </Button>
           </View>
         </View>

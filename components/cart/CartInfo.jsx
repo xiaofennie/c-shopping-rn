@@ -17,7 +17,7 @@ const CartInfo = props => {
     <View className="px-4 py-2 mt-2 space-y-5 lg:mt-0 lg:h-fit lg:py-4">
       {/* total cart price */}
       <View className="pb-2 border-b border-gray-200 flex flex-row justify-between">
-        <Text className="text-sm">Price({formatNumber(totalItems)}items)</Text>
+        <Text className="text-sm">Price({formatNumber(totalItems)} items)</Text>
         <View className="flex-center flex-row">
           <Text className="">{formatNumber(totalPrice)}</Text>
           <Text className="ml-1">¥</Text>
@@ -26,7 +26,7 @@ const CartInfo = props => {
 
       {/* total cart items */}
       <View className="flex flex-row justify-between">
-        <Text>Total price</Text>
+        <Text>Total</Text>
         <View className="flex-center flex-row">
           <Text className="text-sm">{formatNumber(totalPrice - totalDiscount)}</Text>
           <Text className="ml-1">¥</Text>

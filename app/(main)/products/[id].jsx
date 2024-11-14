@@ -65,7 +65,7 @@ export default function SingleProductScreen() {
                     className="px-2 py-1"
                   />
                   {formatNumber(totalItems) > 0 && (
-                    <Pressable className="absolute outline outline-2 bottom-3.5 left-5 bg-red-500 rounded-md w-5 h-5 p-0.5">
+                    <Pressable className="absolute outline outline-2 bottom-3.5 left-5 bg-primary rounded-md w-5 h-5 p-0.5">
                       <Text className=" text-center text-xs text-white">
                         {formatNumber(totalItems)}
                       </Text>
@@ -122,14 +122,14 @@ export default function SingleProductScreen() {
                   {/* <FreeShipping /> */}
                 </View>
               </View>
-              <View>
-                {product?.description?.length > 0 && (
-                  <Description description={product.description} />
-                )}
-              </View>
-              {/* <SmilarProductsSlider smilarProducts={smilarProducts} /> */}
               <View className="section-divide-y h-2 bg-gray-100" />
+              {product?.description?.length > 0 && (
+                <>
+                  <Description description={product.description} />
+                </>
+              )}
               <Specification specification={product.specification} />
+              {/* <SmilarProductsSlider smilarProducts={smilarProducts} /> */}
 
               <View className="section-divide-y h-2 bg-gray-100" />
               {/* 评价 */}

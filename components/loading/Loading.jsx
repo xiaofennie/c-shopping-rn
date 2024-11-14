@@ -9,7 +9,7 @@ import Animated, {
 
 export default function Loading(props) {
   //? Props
-  const { style } = props
+  const { style, color } = props
 
   //? Assets
   const onePoint = useSharedValue(0)
@@ -19,18 +19,22 @@ export default function Loading(props) {
 
   const animatedOnePointStyles = useAnimatedStyle(() => ({
     transform: [{ scaleX: onePoint.value }, { scaleY: onePoint.value }],
+    backgroundColor: color || '#cd1c78',
   }))
 
   const animatedTwoPointStyles = useAnimatedStyle(() => ({
     transform: [{ translateX: twoPoint.value }, { translateY: 0 }],
+    backgroundColor: color || '#cd1c78',
   }))
 
   const animatedThreePointStyles = useAnimatedStyle(() => ({
     transform: [{ translateX: threePoint.value }, { translateY: 0 }],
+    backgroundColor: color || '#cd1c78',
   }))
 
   const animatedFourPointStyles = useAnimatedStyle(() => ({
     transform: [{ scaleX: fourPoint.value }, { scaleY: fourPoint.value }],
+    backgroundColor: color || '#cd1c78',
   }))
 
   React.useEffect(() => {

@@ -2,7 +2,7 @@ import { FlashList } from '@shopify/flash-list'
 import { Stack, useLocalSearchParams } from 'expo-router'
 import { View, Text } from 'react-native'
 
-import { Filter, ProductCard, ProductSkeleton, Sort, SubCategories } from '@/components'
+import { Filter, ProductCard, Sort, SubCategories } from '@/components'
 import { useChangeRoute } from '@/hooks'
 import { useGetCategoriesQuery, useGetProductsQuery } from '@/services'
 
@@ -106,15 +106,15 @@ export default function ProductsScreen() {
               </View> */}
 
               <View className="flex flex-row justify-between pb-2">
-                <Text className="text-base text-neutral-600">All Products</Text>
+                <Text className="text-base text-neutral-600">All products</Text>
 
                 <Text className="text-base text-neutral-600">
-                  {data?.data?.productsLength} products
+                  {data?.data?.productsLength} items
                 </Text>
               </View>
             </View>
             {/* Products */}
-            {isFetchingProduct && page === 1 && <ProductSkeleton />}
+            {/* {isFetchingProduct && page === 1 && <ProductSkeleton />} */}
             {data && data?.data?.products.length > 0 ? (
               <FlashList
                 data={data?.data?.products}
@@ -124,7 +124,7 @@ export default function ProductsScreen() {
                 estimatedItemSize={200}
               />
             ) : (
-              <Text className="text-center text-red-500">Product not found</Text>
+              <Text className="text-center text-primary">Coming soon.</Text>
             )}
           </View>
         </View>

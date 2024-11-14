@@ -2,7 +2,7 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import { Link, Stack, useRouter } from 'expo-router'
 import { useEffect } from 'react'
 import { useForm } from 'react-hook-form'
-import { Text, View } from 'react-native'
+import { Text, View, Image } from 'react-native'
 
 import { Button, HandleResponse, Logo, TextField } from '@/components'
 import { useAppDispatch } from '@/hooks'
@@ -52,7 +52,7 @@ export default function LoginScreen() {
     <>
       <Stack.Screen
         options={{
-          title: 'Login',
+          title: 'Sign in',
           headerBackTitleVisible: false,
         }}
       />
@@ -68,13 +68,13 @@ export default function LoginScreen() {
       )}
       <View className="h-[100%] bg-white pt-10">
         <View className="w-[100vw] px-8 py-6 space-y-4">
-          {/* <Logo className="mx-auto w-40 h-16" /> */}
-          <Text className="text-center text-[#faea71] text-4xl font-bold">floor</Text>
-          <Text className=" mt-56">Login</Text>
+          <View className="w-40 h-16 mx-auto">
+            <Logo />
+          </View>
           <View className="space-y-0">
             <TextField
               errors={formErrors.email}
-              placeholder="Email"
+              placeholder="Enter your email"
               name="email"
               keyboardType="email-address"
               autoCapitalize="none"
@@ -84,19 +84,19 @@ export default function LoginScreen() {
             <TextField
               errors={formErrors.password}
               secureTextEntry
-              placeholder="Password"
+              placeholder="Enter your password"
               name="password"
               control={control}
             />
             <Button isLoading={isLoading} onPress={handleSubmit(onSubmit)}>
-              Login
+              Sign in
             </Button>
           </View>
 
           <View className="flex flex-row">
-            <Text className="inline mr-2 text-gray-800 text-xs">I don't have an account yet.</Text>
+            <Text className="inline mr-2 text-gray-800 text-xs">New to Kirin?</Text>
             <Link replace href="/register" className="text-blue-400 text-xs">
-              Go register
+              Sign up
             </Link>
           </View>
         </View>

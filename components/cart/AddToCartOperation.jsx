@@ -60,7 +60,7 @@ const AddToCartOperation = props => {
 
   //? Render(s)
   return (
-    <View className="flex flex-row items-center justify-between p-3 bg-white border-t border-gray-300 px-5 shadow-3xl ">
+    <View className="flex flex-row items-center justify-end p-3 bg-white border-t border-gray-300 px-5 shadow-3xl ">
       {currentItemInCart ? (
         <View className="flex gap-x-4">
           <View className="w-44">

@@ -30,7 +30,7 @@ export default function ProfileScreen() {
     //   path: '/profile/reviews',
     // },
     {
-      name: 'Address Management',
+      name: 'My Address',
       Icon: Icons.MaterialIcons,
       IconName: 'location-city',
       path: '/profile/addresses',
@@ -57,7 +57,7 @@ export default function ProfileScreen() {
           headerShown: false,
         }}
       />
-      <AuthWrapper tips="Enjoy Shoppin">
+      <AuthWrapper tips="Enjoy">
         <ScrollView className="bg-white">
           <View style={{ paddingTop: insets.top + 60 }} className="flex bg-white">
             <View className="flex flex-row items-center px-4">
@@ -65,8 +65,8 @@ export default function ProfileScreen() {
               <View className="flex flex-col flex-1 gap-y-1">
                 {isLoading ? (
                   <>
-                    <View className="h-5 bg-red-200 rounded-md animate-pulse" />
-                    <View className="w-32 h-5 bg-red-200 rounded-md animate-pulse" />
+                    {/* <View className="h-5 bg-red-200 rounded-md animate-pulse" />
+                    <View className="w-32 h-5 bg-red-200 rounded-md animate-pulse" /> */}
                   </>
                 ) : (
                   <>

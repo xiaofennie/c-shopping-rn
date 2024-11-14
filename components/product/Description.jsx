@@ -15,7 +15,7 @@ const Description = props => {
   //? Render(s)
   return (
     <Pressable>
-      <View className="px-3">
+      <View className="px-3 mt-3">
         <Text className="mb-3 lg:border-b-2 lg:border-red-500 w-fit font-semibold">Introduce</Text>
         <Text className="gap-y-2 text-sm leading-6 tracking-wider text-gray-600 lg:text-sm lg:leading-8">
           {isShowDesc ? description : truncate(description, 300)}

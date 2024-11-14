@@ -95,7 +95,7 @@ export { default as UserNameModal } from './modals/UserNameModal'
 export { default as AddressModal } from './modals/AddressModal'
 
 //* SVGs
-export { default as Logo } from './svgs/logo.svg'
+export { default as Logo } from './Logo'
 export { default as OrderEmpty } from './svgs/order-empty.svg'
 export { default as EmptySearch } from './svgs/empty-search.svg'
 export { default as LogoH } from './svgs/logo-h.svg'
